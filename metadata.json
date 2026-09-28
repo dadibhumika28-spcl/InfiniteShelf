@@ -1,0 +1,6 @@
+{
+  "name": "The Infinite Shelf",
+  "description": "Discover Beyond the Shelf — Premium online bookstore marketplace for physical books, eBooks, and audiobooks with integrated reader and audio player.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
