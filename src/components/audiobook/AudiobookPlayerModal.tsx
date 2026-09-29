@@ -61,7 +61,7 @@ export const AudiobookPlayerModal: React.FC = () => {
     return (
       <aside 
         aria-label="Audiobook mini player"
-        className="fixed bottom-4 right-4 z-50 bg-[#1E1B18] text-[#FAF8F5] border border-[#3E3834] rounded-md shadow-2xl p-3 flex items-center gap-3.5 max-w-md w-full animate-slideUp backdrop-blur-md"
+        className="fixed bottom-24 right-4 sm:right-6 z-40 bg-[#1E1B18] text-[#FAF8F5] border border-[#3E3834] rounded-md shadow-2xl p-3 flex items-center gap-3.5 max-w-md w-full animate-slideUp backdrop-blur-md"
       >
         <img
           src={book.cover}

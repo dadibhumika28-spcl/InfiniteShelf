@@ -76,3 +76,64 @@
   z-index: 10;
 }
 
+/* n8n Chat Widget Theme - The Infinite Shelf Brand Styling */
+:root {
+  --chat--color-primary: #8B2635;
+  --chat--color-secondary: #23201D;
+  --chat--color-dark: #1E1B18;
+  --chat--color-light: #FAF8F5;
+  --chat--color-light-shade-50: #F3EFE9;
+  --chat--color-light-shade-100: #E2D8C9;
+  --chat--color-medium: #786D60;
+  --chat--color-white: #FAF8F5;
+  --chat--color-typing: #8B2635;
+  --chat--font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --chat--spacing: 1.25rem;
+  --chat--border-radius: 8px;
+  --chat--transition-duration: 0.25s;
+
+  --chat--window--width: 400px;
+  --chat--window--height: 580px;
+  --chat--window--border-radius: 8px;
+  --chat--window--border: 1px solid #DDD3C2;
+  --chat--window--z-index: 9999;
+  --chat--window--bottom: 24px;
+  --chat--window--right: 24px;
+
+  --chat--toggle--background: #8B2635;
+  --chat--toggle--hover--background: #731F2C;
+  --chat--toggle--active--background: #5E1924;
+  --chat--toggle--color: #FAF8F5;
+  --chat--toggle--width: 56px;
+  --chat--toggle--height: 56px;
+
+  --chat--header--background: #23201D;
+  --chat--header--color: #FAF8F5;
+  --chat--header--padding: 1.25rem 1.5rem;
+  --chat--heading--font-size: 1.05rem;
+  --chat--subtitle--font-size: 0.8rem;
+
+  --chat--body--background: #FAF8F5;
+
+  --chat--message--user--background: #8B2635;
+  --chat--message--user--color: #FAF8F5;
+  --chat--message--user--border: none;
+
+  --chat--message--bot--background: #F3EFE9;
+  --chat--message--bot--color: #1E1B18;
+  --chat--message--bot--border: 1px solid #E2D8C9;
+
+  --chat--footer--background: #F5EFEB;
+  --chat--footer--border-top: 1px solid #E2D8C9;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --chat--window--width: calc(100vw - 32px);
+    --chat--window--height: calc(100vh - 120px);
+    --chat--window--bottom: 16px;
+    --chat--window--right: 16px;
+  }
+}
+
+

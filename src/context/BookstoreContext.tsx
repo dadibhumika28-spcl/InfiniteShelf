@@ -89,6 +89,11 @@ interface BookstoreContextType {
   isCheckoutOpen: boolean;
   setIsCheckoutOpen: (open: boolean) => void;
 
+  // Chatbot
+  isChatOpen: boolean;
+  setIsChatOpen: (open: boolean) => void;
+  openChat: () => void;
+
   // Feedback Toast
   toastMessage: string | null;
   showToast: (msg: string) => void;
@@ -244,6 +249,11 @@ export const BookstoreProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [previewBook, setPreviewBook] = useState<Book | null>(null);
   const [quickViewBook, setQuickViewBook] = useState<Book | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const openChat = () => {
+    setIsChatOpen(true);
+  };
 
   // Persist State
   useEffect(() => {
@@ -660,6 +670,9 @@ export const BookstoreProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         closeQuickView,
         isCheckoutOpen,
         setIsCheckoutOpen,
+        isChatOpen,
+        setIsChatOpen,
+        openChat,
         toastMessage,
         showToast
       }}

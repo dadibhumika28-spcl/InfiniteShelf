@@ -19,6 +19,7 @@ import { QuickViewModal } from './components/books/QuickViewModal';
 import { SamplePreviewModal } from './components/books/SamplePreviewModal';
 import { EbookReaderModal } from './components/reader/EbookReaderModal';
 import { AudiobookPlayerModal } from './components/audiobook/AudiobookPlayerModal';
+import { N8nChatWidget } from './components/chat/N8nChatWidget';
 
 const AppContent: React.FC = () => {
   const {
@@ -69,6 +70,7 @@ const AppContent: React.FC = () => {
       <SamplePreviewModal book={previewBook} onClose={closePreview} />
       <EbookReaderModal book={activeReadingBook} onClose={closeEbookReader} />
       <AudiobookPlayerModal />
+      <N8nChatWidget />
 
       {/* Main Persistent Footer */}
       <Footer />

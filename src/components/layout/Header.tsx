@@ -25,6 +25,7 @@ export const Header: React.FC = () => {
     cartCount,
     wishlist,
     setIsCartOpen,
+    openChat,
     books
   } = useBookstore();
 
@@ -86,6 +87,14 @@ export const Header: React.FC = () => {
           className="ml-2 underline hover:text-[#D4A373] text-[11px] cursor-pointer"
         >
           Explore Catalog →
+        </button>
+        <span className="hidden md:inline text-[#D4A373]">•</span>
+        <button
+          onClick={openChat}
+          className="hidden md:inline-flex items-center gap-1 text-[#D4A373] hover:text-white text-[11px] font-medium cursor-pointer"
+        >
+          <Sparkles className="w-3 h-3 text-[#D4A373]" />
+          <span>Ask AI Assistant</span>
         </button>
       </div>
 
@@ -193,6 +202,15 @@ export const Header: React.FC = () => {
                 }`}
               >
                 Orders
+              </button>
+
+              <button
+                onClick={openChat}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#8B2635]/10 hover:bg-[#8B2635]/20 text-[#8B2635] text-xs font-semibold transition-colors cursor-pointer"
+                title="Open AI Literary Assistant"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-[#8B2635]" />
+                <span>Ask AI</span>
               </button>
             </nav>
           </div>
@@ -379,6 +397,15 @@ export const Header: React.FC = () => {
               className="text-left py-2 px-3 rounded hover:bg-[#F2ECE1] flex items-center gap-2"
             >
               <Heart className="w-4 h-4 text-[#8B2635]" /> Saved Wishlist ({wishlist.length})
+            </button>
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openChat();
+              }}
+              className="text-left py-2 px-3 rounded bg-[#8B2635]/10 text-[#8B2635] font-semibold flex items-center gap-2"
+            >
+              <Sparkles className="w-4 h-4 text-[#8B2635]" /> AI Literary Assistant
             </button>
           </div>
 
